@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Robot Emoji</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      width: 1300px; /* 필요 시 크기 조절 가능 */
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- 표시할 이미지를 위한 img 태그 -->
+  <img id="emojiImage" src="" alt="robot face" />
+
+  <script>
+    // URL의 query parameter에서 ?gif=... 를 읽어옴
+    // 예) ?gif=angry -> gifName = "angry"
+    //     ?gif=happy -> gifName = "happy"
+    const urlParams = new URLSearchParams(window.location.search);
+    const gifName = urlParams.get('gif') || 'default'; 
+    // 파라미터가 없으면 'default'로 처리 (필요하다면 default.gif도 만들어둘 수 있음)
+
+    // <img> 태그의 src를 "angry.gif", "happy.gif" 등으로 설정
+    document.getElementById("emojiImage").src = gifName + ".gif";
+  </script>
+</body>
+</html>
