@@ -22,16 +22,13 @@
   <!-- 표시할 이미지를 위한 img 태그 -->
   <img id="emojiImage" src="" alt="robot face" />
 
+<!-- index.html -->
   <script>
-    // URL의 query parameter에서 ?gif=... 를 읽어옴
-    // 예) ?gif=angry -> gifName = "angry"
-    //     ?gif=happy -> gifName = "happy"
     const urlParams = new URLSearchParams(window.location.search);
     const gifName = urlParams.get('gif') || 'default'; 
-    // 파라미터가 없으면 'default'로 처리 (필요하다면 default.gif도 만들어둘 수 있음)
-
-    // <img> 태그의 src를 "angry.gif", "happy.gif" 등으로 설정
+    // 예) ?gif=angry -> angry.gif
     document.getElementById("emojiImage").src = gifName + ".gif";
   </script>
+  
 </body>
 </html>
