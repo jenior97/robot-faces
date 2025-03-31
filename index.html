@@ -44,9 +44,9 @@
     html, body {
       margin: 0;
       padding: 0;
-      /* 내부 페이지 영역을 150vw/150vh로 크게 하여 이미지가 더 크게 보이도록 */
-      width: 100vw;
-      height: 100vh;
+      /* 내부 페이지 영역을 크게 설정하여 스크롤 가능하게 함 (예: 150vw/150vh) */
+      width: 150vw;
+      height: 150vh;
       background-color: #ffffff;
       overflow: auto;
     }
@@ -56,10 +56,10 @@
       align-items: center;
     }
     img {
-      /* 이미지 크기를 동일하게 설정하여 화면 전체를 꽉 채우게 함 */
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
+      /* 이미지 전체가 보이도록 최대 크기를 지정하고, object-fit: contain 사용 */
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
       display: block;
     }
   </style>
@@ -74,3 +74,4 @@
   </script>
 </body>
 </html>
+
