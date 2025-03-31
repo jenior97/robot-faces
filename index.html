@@ -44,10 +44,11 @@
     html, body {
       margin: 0;
       padding: 0;
-      width: 110vw;
-      height: 111vh;
+      /* 내부 페이지 영역을 150vw/150vh로 크게 하여 이미지가 더 크게 보이도록 */
+      width: 105vw;
+      height: 105vh;
       background-color: #ffffff;
-      overflow: hidden;
+      overflow: auto;
     }
     body {
       display: flex;
@@ -55,8 +56,9 @@
       align-items: center;
     }
     img {
-      width: 110vw;
-      height: 111vh;
+      /* 이미지 크기를 동일하게 설정하여 화면 전체를 꽉 채우게 함 */
+      width: 105vw;
+      height: 105vh;
       object-fit: cover;
       display: block;
     }
