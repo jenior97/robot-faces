@@ -31,6 +31,7 @@
 </body>
 </html> -->
 
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -39,14 +40,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
   <style>
     html, body {
       margin: 0;
       padding: 0;
       width: 100vw;
-      min-height: 101vh; /* 뷰포트보다 살짝 크게 만들어 스크롤 유도 */
+      height: 100vh;
       background-color: #ffffff;
+      overflow: hidden;
     }
     body {
       display: flex;
@@ -54,8 +55,9 @@
       align-items: center;
     }
     img {
-      max-width: 100%; /* 필요에 따라 고정 크기 대신 자연스러운 크기로 표시 */
-      height: auto;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
       display: block;
     }
   </style>
@@ -70,4 +72,3 @@
   </script>
 </body>
 </html>
-
